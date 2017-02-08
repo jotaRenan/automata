@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sierpinski's triangle</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css" media="screen">
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      padding-top: 2%;
+    }
+    .center section {
+      display: inherit;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      max-width: 940px;
+      width:100%;
+    }
+    .center section > div {
+      flex-grow: 1;
+      height: auto;
+      max-width: 60%;
+      justify-content: center;
+      align-items: center;
+      padding: 1em;
+    }
+    .no-padding {
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <main class="center">
+    <canvas id="triangle"></canvas>
+    <section>
+      <div>
+        <p>The Sierpínski's triangle is a fractal image composed of nested equilateral triangles. It is named after the Polish mathematician Wacław Sierpiński, but appeared as a decorative pattern many centuries prior to the work of Sierpiński. It also appears in certain <a href="https://en.wikipedia.org/wiki/Cellular_automaton" >cellular automata</a> such as rule 90.</p>.
+      </div>
+      <div class="no-padding" style="padding: 0; align-self: flex-start;">
+        <p><label>Recursions: <input type="range" id="recAmount" min="0" max="10" value="1"></label></p>
+        <label>
+          Colours
+          <input type="checkbox" id="coloursCkbx">
+        </label>
+        <label>Background colour: <input type="color" value="#000000" id="bgColour"></label>
+      </div>
+    </section>
+
+    
+  </main>
+  <script src="sierpinski.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html>
